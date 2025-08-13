@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Apresentação Caio Filizola</title>
+    <base href="/cfsitefiori/">
     <style>
         html, body, body > div, #container, #container-uiarea {
             height: 100%;
@@ -22,16 +23,6 @@
         data-sap-ui-async="true"
         data-sap-ui-frameOptions="trusted"
     ></script>
-
-    <script>
-        var oDate = new Date().getHours()
-
-        if(oDate >= 18 || oDate < 6){
-            sap.ui.getCore().attachInit( oEvent => { sap.ui.getCore().applyTheme("sap_horizon_dark")})
-        }else{
-            sap.ui.getCore().attachInit( oEvent => { sap.ui.getCore().applyTheme("sap_horizon")})
-        }
-    </script>
 </head>
 <body class="sapUiBody sapUiSizeCompact" id="content">
     <div
