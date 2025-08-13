@@ -1,0 +1,18 @@
+sap.ui.define([
+    "sap/ui/core/mvc/Controller"
+], (Controller) => {
+    "use strict";
+
+    return Controller.extend("projectcftech.controller.View", {
+        onInit() {
+        },
+
+        onMail(){
+            window.location.href = `mailto:caio.filizola1905@gmail.com`
+        },
+
+        onLinkedIn(){
+            window.open(`https://br.linkedin.com/in/caio-filizola-5033a617a`, `_blank`)
+        }
+    });
+});

@@ -1,0 +1,109 @@
+{
+  "_version": "1.65.0",
+  "sap.app": {
+    "id": "projectcftech",
+    "type": "application",
+    "i18n": {
+      "bundleUrl": "i18n/i18n.properties",
+      "supportedLocales": [
+        ""
+      ]
+    },
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:basic",
+      "version": "1.18.4",
+      "toolsId": "3216acb7-a6fe-4ce6-8580-56f69e6af3a1"
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": true,
+    "dependencies": {
+      "minUI5Version": "1.139.0",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "projectcftech.i18n.i18n",
+          "supportedLocales": [
+            ""
+          ]
+        }
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ],
+      "images": {
+        "path": "images/"
+      }
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "controlAggregation": "pages",
+        "controlId": "app",
+        "transition": "slide",
+        "type": "View",
+        "viewType": "XML",
+        "path": "projectcftech.view",
+        "async": true,
+        "viewPath": "projectcftech.view"
+      },
+      "routes": [
+        {
+          "name": "RouteView",
+          "pattern": ":?query:",
+          "target": [
+            "TargetView"
+          ]
+        }
+      ],
+      "targets": {
+        "TargetView": {
+          "id": "View",
+          "name": "View"
+        }
+      }
+    },
+    "rootView": {
+      "viewName": "projectcftech.view.App",
+      "type": "XML",
+      "id": "App",
+      "async": true
+    }
+  }
+}

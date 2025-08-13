@@ -1,0 +1,7 @@
+/* Enter your custom styles here */
+.imgCircleResponsive {
+  width: 80%;          /* 80% da largura da célula */
+  height: auto;
+  border-radius: 30%;
+  object-fit: cover;
+}

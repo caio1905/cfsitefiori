@@ -1,0 +1,162 @@
+<mvc:View xmlns:core="sap.ui.core" controllerName="projectcftech.controller.View"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}" showHeader="false" showFooter="true">
+        <content>
+            <ObjectHeader
+                icon="images/caio.png"
+                iconDensityAware="false"
+                iconAlt="Caio Filizola"
+                imageShape="Circle"
+                responsive="true"
+                title="Caio Filizola"
+                intro="{i18n>job}"
+                class="sapUiResponsivePadding--header" >
+                <attributes>
+                    <ObjectAttribute title="{i18n>emailDesc}" text="caio.filizola1905@gmail.com" active="true" press="onMail"/>
+                    <ObjectAttribute title="LinkedIn" text="Caio Filizola" active="true" press="onLinkedIn"/>
+                    <ObjectAttribute title="{i18n>skill}" text="{i18n>link}" />
+                </attributes>
+            </ObjectHeader>
+
+            <IconTabBar
+                id="idIconTabBarMulti"
+                expanded="{device>/isNoPhone}"
+                class="sapUiResponsiveContentPadding">
+                <items>
+                    <IconTabFilter icon="sap-icon://hint" key="info">
+                        <VBox class="sapUiSmallMargin">
+                         <Title text="{i18n>about}" level="H2" />
+                        <FormattedText
+                        htmlText='&lt;p&gt;Sou um profissional apaixonado por tecnologia, com foco em soluções SAP modernas e escaláveis.&lt;/p&gt;
+                        &lt;p&gt;Atuo com desenvolvimento SAP Fiori (on Premise e Cloud) e tenho sólida experiência em projetos utilizando o ecossistema SAP BTP, S/4HANA e SAPUI5, com ênfase em performance, usabilidade e integração.&lt;/p&gt;
+
+                        &lt;p&gt;Possuo experiência prática com CAPM (utilizando o padrão REST), CDS Views, RAP, ABAP OO e desenvolvimento de serviços OData (via CDS e SEGW), além de integração com SAP CPI, utilizando Groovy Script para manipulação de dados em APIs OData (V2 e V4).&lt;/p&gt;
+
+                        &lt;p&gt;Utilizo o SAP BTP como plataforma principal (PAAS), com Cloud Foundry como ambiente de execução, onde desenvolvo aplicações e APIs customizadas (Node.js), Calculation Views e autenticações via oAuth 2.0 integradas ao XSUAA.&lt;/p&gt;
+
+                        &lt;p&gt;Participei de projetos relevantes na indústria automotiva, incluindo uma implantação internacional na Argentina, reconhecida como case de sucesso.&lt;/p&gt;
+                        &lt;p&gt;Também colaborei na formação de novos talentos, ministrando treinamentos internos em SAPUI5, Fiori FreeStyle e CAPM.&lt;/p&gt;
+                        &lt;p&gt;Atuei como Consultor ERP na Capgemini, desenvolvendo soluções baseadas em Fiori Elements e RAP, com foco em arquitetura limpa, escalabilidade e integração via microsserviços.&lt;/p&gt;
+
+                        &lt;p&gt;Atualmente, atuo como Arquiteto de Soluções SAP na Deloitte, liderando o desenvolvimento de soluções robustas baseadas em Fiori Elements, SAPUI5, RAP, CAPM e SAP BTP. Sou responsável pelo planejamento técnico, arquitetura e manutenção das entregas, garantindo qualidade, escalabilidade e alinhamento às melhores práticas. Além disso, contribuo para a capacitação e mentoring de desenvolvedores, promovendo a excelência técnica e a inovação contínua.&lt;/p&gt;
+
+
+                        &lt;p&gt;Sempre busco aprender novas tecnologias e transformar conhecimento em soluções de impacto, contribuindo para a inovação e crescimento das equipes e organizações onde atuo.&lt;/p&gt;'
+                        />
+                        </VBox>
+                    </IconTabFilter>
+                    <IconTabFilter
+                        icon="sap-icon://business-objects-experience"
+                        key="attachments"
+                        >
+
+                          <Table inset="false" headerText="Experiências Profissionais">
+                            <columns>
+                                <Column>
+                                    <Text text="Empresa" />
+                                </Column>
+                                <Column>
+                                    <Text text="Período" />
+                                </Column>
+                                <Column>
+                                    <Text text="Cargo" />
+                                </Column>
+                                <Column>
+                                    <Text text="Status" />
+                                </Column>
+                            </columns>
+                            <items>
+                            <ColumnListItem>
+                                <cells>
+                                    <Image src="images/deloitte.png" class="imgCircleResponsive" />
+                                    <Text text="08/2025" />
+                                    <Text text="Arquiteto de Soluções SAP" />
+                                    <ObjectStatus class="sapUiSmallMarginBottom" text="Ativo" inverted="true" icon="sap-icon://sys-enter-2" state="Success" />
+                                </cells>
+                            </ColumnListItem>
+                            <ColumnListItem>
+                                <cells>
+                                    <Image src="images/capgemini.png" class="imgCircleResponsive" />
+                                    <Text text="03/2025 - 08/2025" />
+                                    <Text text="Consultor ERP" />
+                                    <ObjectStatus class="sapUiSmallMarginBottom" text="Inativo" inverted="true" state="None" />
+                                </cells>
+                            </ColumnListItem>
+                            <ColumnListItem>
+                                <cells>
+                                    <Image src="images/accenture.png" class="imgCircleResponsive" />
+                                    <Text text="01/2021 - 03/2025" />
+                                    <Text text="Desenvolvedor Sênior" />
+                                    <ObjectStatus class="sapUiSmallMarginBottom" text="Inativo" inverted="true" state="None" />
+                                </cells>
+                            </ColumnListItem>
+                            </items>
+                        </Table>
+                        
+                    </IconTabFilter>
+                    <IconTabFilter icon="sap-icon://action-settings" key="people">
+                       
+                       <Table inset="false" headerText="Habilidades">
+                            <columns>
+                                <Column>
+                                    <Text text="Ferramenta" />
+                                </Column>
+                                <Column>
+                                    <Text text="Descrição" />
+                                </Column>
+                                <Column>
+                                    <Text text="Nivel" />
+                                </Column>
+                            </columns>
+                            <items>
+                            <ColumnListItem>
+                                <cells>
+                                    <Text text="SAP UI5" />
+                                    <Text text="{i18n>ui5}" />
+                                    <RatingIndicator maxValue="5" enabled= "false" class="sapUiSmallMarginBottom" value="5" iconSize="22px" tooltip="Rating Tooltip" />
+                                </cells>
+                            </ColumnListItem>
+                            <ColumnListItem>
+                                <cells>
+                                    <Text text="SAP BTP" />
+                                    <Text text="{i18n>btp}" />
+                                    <RatingIndicator maxValue="5" enabled= "false" class="sapUiSmallMarginBottom" value="5" iconSize="22px" tooltip="Rating Tooltip" />
+                                </cells>
+                            </ColumnListItem>
+                            <ColumnListItem>
+                                <cells>
+                                    <Text text="SAP CAP" />
+                                    <Text text="{i18n>cap}" />
+                                    <RatingIndicator maxValue="5" enabled= "false" class="sapUiSmallMarginBottom" value="4" iconSize="22px" tooltip="Rating Tooltip" />
+                                </cells>
+                            </ColumnListItem>
+                            <ColumnListItem>
+                                <cells>
+                                    <Text text="SAP ABAP" />
+                                    <Text text="{i18n>abap}" />
+                                    <RatingIndicator maxValue="5" enabled= "false" class="sapUiSmallMarginBottom" value="4" iconSize="22px" tooltip="Rating Tooltip" />
+                                </cells>
+                            </ColumnListItem>
+                            <ColumnListItem>
+                                <cells>
+                                    <Text text="SAP RAP" />
+                                    <Text text="{i18n>rap}" />
+                                    <RatingIndicator maxValue="5" enabled= "false" class="sapUiSmallMarginBottom" value="3" iconSize="22px" tooltip="Rating Tooltip" />
+                                </cells>
+                            </ColumnListItem>
+                            <ColumnListItem>
+                                <cells>
+                                    <Text text="SAP CPI" />
+                                    <Text text="{i18n>cpi}" />
+                                    <RatingIndicator maxValue="5" enabled= "false" class="sapUiSmallMarginBottom" value="3" iconSize="22px" tooltip="Rating Tooltip" />
+                                </cells>
+                            </ColumnListItem>
+                            </items>
+                        </Table>
+                    </IconTabFilter>
+                </items>
+	        </IconTabBar>
+        </content>
+    </Page>
+</mvc:View>
